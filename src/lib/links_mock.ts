@@ -25,4 +25,4 @@ export const links = [
   },
 ] as const;
 
-export type SectionName = typeof links[number]["name"];
+export type SectionName = (typeof links)[number]["name"];
