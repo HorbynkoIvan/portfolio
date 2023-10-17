@@ -24,5 +24,3 @@ export const links = [
     hash: "#contact",
   },
 ] as const;
-
-export type SectionName = (typeof links)[number]["name"];
