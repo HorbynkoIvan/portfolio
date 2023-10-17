@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import clsx from "clsx";
 import Link from "next/link";
-import { links } from "@/src/lib/links_mock";
+import { links } from "@/src/mocks/links_mock";
 import { useActiveSectionContext } from "@/src/context/active-section-context";
 
 const Header = () => {

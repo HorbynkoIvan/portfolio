@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import { projectsData } from "@/src/lib/projects_mock";
+import { projectsData } from "@/src/mocks/projects_mock";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 // type ProjectProps = typeof projectsData[number];

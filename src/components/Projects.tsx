@@ -2,7 +2,7 @@
 
 import React from "react";
 import SectionHeading from "./SectionHeading";
-import { projectsData } from "@/src/lib/projects_mock";
+import { projectsData } from "@/src/mocks/projects_mock";
 import Project from "./Project";
 import { useSectionInView } from "@/src/hooks/useSectionInView";
 
