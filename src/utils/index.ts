@@ -1,4 +1,4 @@
-export const index = (value: unknown, maxLength: number) => {
+export const validation = (value: unknown, maxLength: number) => {
   if (!value || typeof value !== "string" || value.length > maxLength) {
     return false;
   }
