@@ -1,8 +1,11 @@
+import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/src/components/Header";
 import ActiveSectionContextProvider from "@/src/context/active-section-context";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
+
 // ToDo change font
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ActiveSectionContextProvider>
           <Header />
           {children}
+          <Toaster />
         </ActiveSectionContextProvider>
       </body>
     </html>
