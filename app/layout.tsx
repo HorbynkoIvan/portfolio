@@ -6,6 +6,7 @@ import ActiveSectionContextProvider from "@/src/context/active-section-context";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { Footer } from "@/src/components/Footer";
+import { ThemeSwitcher } from "@/src/components/ThemeSwitcher";
 
 // ToDo change font
 const inter = Inter({ subsets: ["latin"] });
@@ -29,6 +30,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
           <Toaster position="top-right" />
         </ActiveSectionContextProvider>
+
+        <ThemeSwitcher />
       </body>
     </html>
   );
