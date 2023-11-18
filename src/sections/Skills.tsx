@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeading from "./SectionHeading";
+import SectionHeading from "../components/SectionHeading";
 import { skillsData } from "@/src/mocks/skills_mock";
 import { useSectionInView } from "@/src/hooks/useSectionInView";
 import { motion } from "framer-motion";
@@ -19,7 +19,7 @@ const fadeInAnimationVariants = {
   }),
 };
 
-export default function Skills() {
+export const Skills = () => {
   const { ref } = useSectionInView("Skills");
 
   return (
@@ -46,4 +46,4 @@ export default function Skills() {
       </ul>
     </section>
   );
-}
+};

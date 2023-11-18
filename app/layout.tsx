@@ -1,5 +1,5 @@
-import React from "react";
 import type { Metadata } from "next";
+import { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import Header from "@/src/components/Header";
 import ActiveSectionContextProvider from "@/src/context/active-section-context";
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Ivan is a frontend developer with a 5 years of experience",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="!scroll-smooth">
       <body

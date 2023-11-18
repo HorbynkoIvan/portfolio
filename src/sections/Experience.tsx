@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./SectionHeading";
+import SectionHeading from "../components/SectionHeading";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/src/mocks/experience_mock";
 import { useSectionInView } from "@/src/hooks/useSectionInView";
-import { useTheme } from "@/src/context/theme-context";
+import { useTheme } from "@/src/hooks";
 
-export default function Experience() {
+export const Experience = () => {
   const { ref } = useSectionInView("Experience");
   const { theme } = useTheme();
 
@@ -49,4 +49,4 @@ export default function Experience() {
       </VerticalTimeline>
     </section>
   );
-}
+};

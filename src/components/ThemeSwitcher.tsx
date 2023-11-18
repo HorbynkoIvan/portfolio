@@ -1,6 +1,6 @@
 "use client";
 import { BsMoon, BsSun } from "react-icons/bs";
-import { useTheme } from "@/src/context/theme-context";
+import { useTheme } from "@/src/hooks";
 
 export const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useTheme();

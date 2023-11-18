@@ -11,7 +11,7 @@ import { useActiveSectionContext } from "@/src/context/active-section-context";
 
 const userName = "Ivan";
 
-export default function Intro() {
+export const Intro = () => {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
@@ -108,4 +108,4 @@ export default function Intro() {
       </motion.div>
     </section>
   );
-}
+};
