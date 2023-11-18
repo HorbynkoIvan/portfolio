@@ -7,6 +7,7 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { Footer } from "@/src/components/Footer";
 import { ThemeSwitcher } from "@/src/components/ThemeSwitcher";
+import { ThemeContextProvider } from "@/src/context/theme-context";
 
 // ToDo change font
 const inter = Inter({ subsets: ["latin"] });
@@ -30,14 +31,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
          w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem]
           xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
 
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-          <Footer />
-          <Toaster position="top-right" />
-        </ActiveSectionContextProvider>
-
-        <ThemeSwitcher />
+        <ThemeContextProvider>
+          <ActiveSectionContextProvider>
+            <Header />
+            {children}
+            <Footer />
+            <Toaster position="top-right" />
+            <ThemeSwitcher />
+          </ActiveSectionContextProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );
