@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 import Link from "next/link";
 import { links } from "@/src/mocks/links_mock";
-import { useActiveSectionContext } from "@/src/context/active-section-context";
+import { useActiveSectionContext } from "@/src/context";
 
-const Header = () => {
+export const Header = () => {
   const { activeSection, setActiveSection } = useActiveSectionContext();
 
   return (
@@ -55,5 +55,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;

@@ -2,7 +2,7 @@
 import { BsMoon, BsSun } from "react-icons/bs";
 import { useTheme } from "@/src/hooks";
 
-export const ThemeSwitcher = () => {
+export const ThemeSwitcherButton = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (

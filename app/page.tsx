@@ -1,4 +1,4 @@
-import Divider from "@/src/components/Divider";
+import { Divider } from "@/src/components";
 import { Intro, About, Projects, Skills, Experience, Contact } from "@/src/sections";
 
 export default function Home() {
