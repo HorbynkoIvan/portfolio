@@ -1,15 +1,9 @@
 "use client";
-import { createContext, ReactNode, useContext, useEffect, useState } from "react";
-
-type Theme = "light" | "dark";
+import { createContext, ReactNode, useEffect, useState } from "react";
+import { Theme, ThemeContextType } from "@/src/types/types";
 
 type Props = {
   children: ReactNode;
-};
-
-type ThemeContextType = {
-  theme: Theme;
-  toggleTheme: () => void;
 };
 
 const THEME_KEY = "theme";

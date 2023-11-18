@@ -1,8 +1,15 @@
 import { useContext } from "react";
-
 import { ThemeContext } from "@/src/context/theme-context";
+import { ThemeContextType } from "@/src/types/types";
 
-export const useTheme = () => {
+/**
+ * Custom hook for accessing the theme context.
+ * @returns {ThemeContextType} The theme context, including the current theme
+ * and a function to toggle it.
+ * @throws {Error} Throws an error if used outside a ThemeContextProvider.
+ */
+
+export const useTheme = (): ThemeContextType => {
   const context = useContext(ThemeContext);
 
   if (context === null) {
