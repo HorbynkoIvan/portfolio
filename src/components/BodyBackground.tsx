@@ -1,4 +1,4 @@
-export const BackgroundElements = () => (
+export const BodyBackground = () => (
   <>
     <div
       className="bg-[#FC766AFF ] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem]

@@ -1,4 +1,9 @@
-export const links = [
+type LinkItemType = {
+  name: string;
+  hash: string;
+};
+
+export const links: readonly LinkItemType[] = [
   {
     name: "Home",
     hash: "#home",
@@ -23,4 +28,4 @@ export const links = [
     name: "Contact",
     hash: "#contact",
   },
-] as const;
+];
