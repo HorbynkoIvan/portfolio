@@ -3,11 +3,17 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 import Link from "next/link";
 import { links } from "@/src/mocks/links_mock";
-import { useActiveSectionContext } from "@/src/context";
+import { useActiveSectionContext } from "@/src/hooks";
 import { HeaderBackground } from "./HeaderBackground";
 
+const linkStyles = {
+  base: "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition",
+  active: "text-gray-950 dark:text-gray-200",
+  inactive: "dark:text-gray-200",
+};
+
 export const Header = () => {
-  const { activeSection, setActiveSection } = useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <header className="z-[999] relative">
@@ -23,15 +29,13 @@ export const Header = () => {
               animate={{ y: 0, opacity: 1 }}>
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-200" +
-                    " dark:hover:text-gray-100",
-                  {
-                    "text-gray-950 dark:text-gray-200": activeSection === link.name,
-                  }
+                  linkStyles.base,
+                  activeSection === link.name ? linkStyles.active : linkStyles.inactive
                 )}
                 href={link.hash}
                 onClick={() => {
                   setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
                 }}>
                 {link.name}
 

@@ -6,8 +6,7 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
-import { useSectionInView } from "@/src/hooks/useSectionInView";
-import { useActiveSectionContext } from "@/src/context/active-section-context";
+import { useSectionInView, useActiveSectionContext } from "@/src/hooks";
 
 const userName = "Ivan";
 

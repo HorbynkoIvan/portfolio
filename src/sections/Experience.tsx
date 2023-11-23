@@ -6,11 +6,11 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/src/mocks/experience_mock";
 import { useSectionInView } from "@/src/hooks/useSectionInView";
-import { useTheme } from "@/src/hooks";
+import { useThemeContext } from "@/src/hooks";
 
 export const Experience = () => {
   const { ref } = useSectionInView("Experience");
-  const { theme } = useTheme();
+  const { theme } = useThemeContext();
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">

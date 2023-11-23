@@ -1,25 +1,32 @@
 "use client";
-
+import { useState, createContext, Dispatch, SetStateAction, ReactNode } from "react";
 import type { SectionName } from "@/src/types/types";
-import React, { useState, createContext, useContext } from "react";
+import { log } from "util";
 
 type ActiveSectionContextProviderProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 type ActiveSectionContextType = {
   activeSection: SectionName;
-  setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
+  setActiveSection: Dispatch<SetStateAction<SectionName>>;
   timeOfLastClick: number;
-  setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
+  setTimeOfLastClick: Dispatch<SetStateAction<number>>;
 };
 
 export const ActiveSectionContext = createContext<ActiveSectionContextType | null>(null);
 
-export const ActiveSectionContextProvider = ({ children }: ActiveSectionContextProviderProps) => {
-  const [activeSection, setActiveSection] = useState<SectionName>("Home");
-  const [timeOfLastClick, setTimeOfLastClick] = useState(0); // we need to keep track of this to disable the observer temporarily when user clicks on a link
+/**
+ * The ActiveSectionContextProvider component provides a context for managing
+ * the active section of your application and tracking the time of the last user click.
+ */
 
+export const ActiveSectionContextProvider = ({ children }: ActiveSectionContextProviderProps) => {
+  // Initialize the active section with "Home" and time of last click with 0.
+  const [activeSection, setActiveSection] = useState<SectionName>("Home");
+  const [timeOfLastClick, setTimeOfLastClick] = useState(0);
+
+  // This context provider exposes the active section and time of last click values to its children.
   return (
     <ActiveSectionContext.Provider
       value={{
@@ -32,13 +39,3 @@ export const ActiveSectionContextProvider = ({ children }: ActiveSectionContextP
     </ActiveSectionContext.Provider>
   );
 };
-
-export function useActiveSectionContext() {
-  const context = useContext(ActiveSectionContext);
-
-  if (context === null) {
-    throw new Error("useActiveSectionContext must be used within an ActiveSectionContextProvider");
-  }
-
-  return context;
-}

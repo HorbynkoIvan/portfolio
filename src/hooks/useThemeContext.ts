@@ -9,7 +9,7 @@ import { ThemeContextType } from "@/src/types/types";
  * @throws {Error} Throws an error if used outside a ThemeContextProvider.
  */
 
-export const useTheme = (): ThemeContextType => {
+export const useThemeContext = (): ThemeContextType => {
   const context = useContext(ThemeContext);
 
   if (context === null) {
