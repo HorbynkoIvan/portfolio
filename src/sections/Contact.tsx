@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "../components/SectionHeading";
+import { SectionHeading } from "@/src/components";
 import SubmitButton from "../components/SubmitButton";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/src/hooks/useSectionInView";

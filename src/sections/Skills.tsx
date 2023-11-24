@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeading from "../components/SectionHeading";
+import { SectionHeading } from "@/src/components";
 import { skillsData } from "@/src/mocks/skills_mock";
 import { useSectionInView } from "@/src/hooks/useSectionInView";
 import { motion } from "framer-motion";

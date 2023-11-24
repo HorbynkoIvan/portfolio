@@ -1,8 +1,7 @@
 "use client";
-
-import SectionHeading from "../components/SectionHeading";
 import { motion } from "framer-motion";
-import { useSectionInView } from "@/src/hooks/useSectionInView";
+import { SectionHeading } from "@/src/components";
+import { useSectionInView } from "@/src/hooks";
 
 export const About = () => {
   const { ref } = useSectionInView("About");
@@ -31,12 +30,14 @@ export const About = () => {
 
       <p>
         {/* eslint-disable-next-line react/no-unescaped-entities */}
-        <span className="italic">When I'm not coding</span>, I enjoy playing video games, watching
-        movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently learning about{" "}
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
-        <span className="font-medium">history and philosophy</span>. I'm also learning how to play
-        the guitar.
+        <span className="italic">When I'm not in the coding zone</span>, you'll often find me at the
+        <span className="font-medium">gym</span>, or pedaling away on my{" "}
+        <span className="font-medium">bicycle</span>, casting a line into the waters for some{" "}
+        <span className="font-medium">fishing</span>, or diving into virtual worlds through{" "}
+        <span className="font-medium">video games</span>. In the cozy corners of my life, I share my
+        space with the charming Sphinx cat Misha. Besides these activities, I am interested in{" "}
+        <span className="font-medium">history</span> and{" "}
+        <span className="font-medium">philosophy</span> in search of answers and enlightenment.
       </p>
     </motion.section>
   );
